@@ -62,8 +62,13 @@
                         password: credentials.password,
                         returnto: ''
                     }
-                });
+                }).toString();
                 page.loading = false;
+				
+				resp = resp.match(/<input class="buttonS"/);
+				if(resp){
+					showtime.message(resp[0], true, false);
+				}
                 if (resp == '') logged = true;
             }
         }
@@ -110,9 +115,9 @@
         setPageHeader(page, plugin.getDescriptor().synopsis);
         page.loading = true;
         var doc = showtime.httpReq(service.baseURL + '/top.php').toString();
-        doc = doc.match(/<div class="bx1 stable">([\s\S]*?)</div>/);
+        doc = doc.match(/<div class="mn1_content">([\s\S]*?)<div class="bx2_0">/);
         if (doc) {
-           var re = /(<a href=".*?</a>)/g;
+           var re = /<div class="bx1 stable">([\s\S]*?)<\/div>/g;
            var match = re.exec(doc[1]);
            while (match) {
                page.appendItem("", "separator", {
