@@ -1,0 +1,14 @@
+{
+	"description": "<p>kinozal.tv :: Торрент трекер<p>Для дополнительной информации, посетите  <a href=\"http://kinozal.tv\">http://kinozal.tv</a>",
+	"author": "d1sc0nnect0r", 
+	"homepage": "http://finesites.ru",
+	"title": "kinozal.tv",
+	"synopsis": "kinozal.tv :: Торрент трекер",
+	"version": "0.0.1",
+        "file": "kinozal.js",
+	"showtimeVersion": "4.8",
+	"type": "ecmascript",
+	"icon": "logo.png",
+	"id": "kinozal",
+	"category": "video"
+}
